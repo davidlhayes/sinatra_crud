@@ -2,8 +2,9 @@ class StudentsController < ApplicationController
 
   get '/' do
 
-    #get all students!
-    students = Students.all.to_json
+    #get all students from!
+    @students = Students.all
+    erb :students_index
 
   end
 
